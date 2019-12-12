@@ -16,8 +16,17 @@ class EmojiBreakFragment : Fragment(R.layout.emoji_break_frag) {
     binding.emoji1.text = "testtest😌😌😌😌😌😌"
     binding.emoji2.text = "testtest😌😌😌😌😌😌"
     binding.emoji3.text = "testtest😌😌😌😌😌😌"
-    binding.emoji4.text = "けんさくさん、こんにてゃ！こちらこそどんな😌"
-    binding.emoji5.text = "けんさくさん、こんにてゃ！こちらこそどんな😌"
-    binding.emoji6.text = "けんさくさん、こんにてゃ！こちらこそどんな😌"
+    binding.emoji4.text = "たなかさん、こんにてゃ！こちらこそどんな😌"
+    binding.emoji5.text = "たなかさん、こんにてゃ！こちらこそどんな😌"
+    binding.emoji6.text = "たなかさん、こんにてゃ！こちらこそどんな😌"
+    binding.emoji7.text = "testtesttesttesttesttest"
+    binding.emoji8.text = "たなかさん、😌\uD83D\uDE0Cこんにてゃ！こちらこそどんな😌"
+    binding.emoji9.text = "たなかさん、😌こんにてゃ！こちらこそどんな😌aa"
+
+    binding.emoji10.isSelected = true
+    binding.emoji10.text = "たなかさん、😌こんにてゃ！こちらこそどんな😌"
+
+    binding.emoji11.text = "たなかさん、😌こんにてゃ！こちらこそどんな😌"
+    binding.emoji12.text = "たなかさん、😌こんにてゃ！こちらこそどんな😌"
   }
 }
