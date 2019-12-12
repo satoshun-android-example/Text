@@ -3,8 +3,11 @@ package com.github.satoshun.example.main.emojibreak
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.github.satoshun.example.R
 import com.github.satoshun.example.databinding.EmojiBreakFragBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class EmojiBreakFragment : Fragment(R.layout.emoji_break_frag) {
   private lateinit var binding: EmojiBreakFragBinding
@@ -28,5 +31,18 @@ class EmojiBreakFragment : Fragment(R.layout.emoji_break_frag) {
 
     binding.emoji11.text = "たなかさん、😌こんにてゃ！こちらこそどんな😌"
     binding.emoji12.text = "たなかさん、😌こんにてゃ！こちらこそどんな😌"
+    lifecycleScope.launch {
+      delay(1000)
+      binding.emoji12.ellipsize = null
+    }
+
+    lifecycleScope.launch {
+      binding.emoji13.text = "たなかさん、😌😌こんに😌てゃ！こちらこそどんな😌"
+
+      binding.emoji13.awaitNextLayout()
+
+      val endIndex = binding.emoji13.layout.getEllipsisStart(0)
+      binding.emoji13.text = binding.emoji13.text.subSequence(0, endIndex + 2)
+    }
   }
 }
