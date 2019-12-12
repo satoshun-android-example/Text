@@ -13,6 +13,11 @@ class EmojiBreakFragment : Fragment(R.layout.emoji_break_frag) {
     super.onViewCreated(view, savedInstanceState)
     binding = EmojiBreakFragBinding.bind(view)
 
-    binding.emoji1.text = "test"
+    binding.emoji1.text = "testtest😌😌😌😌😌😌"
+    binding.emoji2.text = "testtest😌😌😌😌😌😌"
+    binding.emoji3.text = "testtest😌😌😌😌😌😌"
+    binding.emoji4.text = "けんさくさん、こんにてゃ！こちらこそどんな😌"
+    binding.emoji5.text = "けんさくさん、こんにてゃ！こちらこそどんな😌"
+    binding.emoji6.text = "けんさくさん、こんにてゃ！こちらこそどんな😌"
   }
 }
