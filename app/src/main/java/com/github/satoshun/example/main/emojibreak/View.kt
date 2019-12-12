@@ -24,7 +24,9 @@ suspend fun TextView.setTextWithStripOverflowText(newText: String) {
   // fast pass
   val currentText = text
   val currentEndIndex = layout?.getEllipsisStart(0)
-  if (currentEndIndex != null && newText.subSequence(0, currentEndIndex) == currentText) {
+  if (currentEndIndex != null &&
+    newText.length > currentEndIndex &&
+    newText.subSequence(0, currentEndIndex) == currentText) {
     return
   }
 
