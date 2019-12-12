@@ -37,14 +37,7 @@ class EmojiBreakFragment : Fragment(R.layout.emoji_break_frag) {
     }
 
     lifecycleScope.launch {
-      binding.emoji13.text = "たなかさん、😌😌こんに😌てゃ！こちらこそどんな😌"
-
-      binding.emoji13.awaitNextLayout()
-
-      if (binding.emoji13.layout == null) return@launch
-
-      val endIndex = binding.emoji13.layout.getEllipsisStart(0)
-      binding.emoji13.text = binding.emoji13.text.subSequence(0, endIndex + 2)
+      binding.emoji13.setTextWithStripOverflowText("たなかさん、😌😌こんに😌てゃ！こちらこそどんな😌")
     }
   }
 }
