@@ -17,26 +17,30 @@ package com.github.satoshun.example.main.emojibreak
 
 import android.view.View
 import android.widget.TextView
+import androidx.core.view.OneShotPreDrawListener
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 
 suspend fun TextView.setTextWithStripOverflowText(newText: String) {
-  // fast pass
-  val currentText = text
-  val currentEndIndex = layout?.getEllipsisStart(0)
-  if (currentEndIndex != null &&
-    newText.length > currentEndIndex &&
-    newText.subSequence(0, currentEndIndex) == currentText) {
-    return
-  }
+  if (text == newText) return
 
   text = newText
-  awaitNextLayout()
+  awaitPreDraw()
 
   val newEndIndex = layout?.getEllipsisStart(0) ?: return
   if (newEndIndex == 0) return
 
   text = text.subSequence(0, newEndIndex + 2)
+}
+
+suspend fun View.awaitPreDraw() = suspendCancellableCoroutine<Unit> { cont ->
+  val listener = OneShotPreDrawListener.add(this) {
+    cont.resume(Unit)
+  }
+  // If the coroutine is cancelled, remove the listener
+  cont.invokeOnCancellation {
+    listener.removeListener()
+  }
 }
 
 suspend fun View.awaitNextLayout() = suspendCancellableCoroutine<Unit> { cont ->

@@ -38,6 +38,10 @@ class EmojiBreakFragment : Fragment(R.layout.emoji_break_frag) {
 
     lifecycleScope.launch {
       binding.emoji13.setTextWithStripOverflowText("たなかさん、😌😌こんに😌てゃ！こちらこそどんな😌")
+
+      delay(1000)
+
+      binding.emoji13.setTextWithStripOverflowText("たなかさん、😌😌こんに😌てゃ！こちらこそどんな😌")
     }
   }
 }
