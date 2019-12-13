@@ -31,7 +31,6 @@ const val INSETTER = "dev.chrisbanes:insetter-ktx:0.2.0"
 
 const val FLEXBOX = "com.google.android:flexbox:2.0.0"
 
-const val CONTENTPAGER = "androidx.contentpager:contentpager:1.0.0-rc01"
 const val WEBKIT = "androidx.webkit:webkit:1.1.0"
 const val MEDIA2 = "androidx.media2:media2:1.0.0-alpha04"
 
@@ -43,7 +42,7 @@ const val NAVIGATION = "androidx.navigation:navigation-common-ktx:$VNAVIGATION"
 const val NAVIGATION_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:$VNAVIGATION"
 const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:$VNAVIGATION"
 
-private const val VROOM = "2.1.0-alpha04"
+private const val VROOM = "2.1.0"
 const val ROOM_COMMON = "androidx.room:room-common:$VROOM"
 const val ROOM_RUNTIME = "androidx.room:room-runtime:$VROOM"
 const val ROOM_COMPILER = "androidx.room:room-compiler:$VROOM"
@@ -54,16 +53,11 @@ const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.0.0"
 const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.2.0-rc01"
 const val LIFECYCLE_RUNTIME = "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-rc01"
 
-const val BIOMETRIC = "androidx.biometric:biometric:1.0.0-alpha03"
-
 const val EMOJI = "androidx.emoji:emoji:1.0.0"
 const val EMOJI_COMPAT = "androidx.emoji:emoji-appcompat:1.0.0"
 const val EMOJI_BUNDLED = "androidx.emoji:emoji-bundled:1.0.0"
 
-const val SAVEDSTATE = "androidx.savedstate:savedstate:1.0.0-alpha02"
-const val SAVEDSTATE_VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha01"
-
-const val VIEWPAGER2 = "androidx.viewpager2:viewpager2:1.0.0-alpha01"
+const val VIEWPAGER2 = "androidx.viewpager2:viewpager2:1.0.0"
 
 const val RECOMMENDATION = "androidx.recommendation:recommendation:1.0.0"
 
@@ -76,10 +70,7 @@ const val RXWEBVIEW = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.3.0"
 const val RXJAVA = "io.reactivex.rxjava2:rxjava:2.2.0"
 const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"
 
-const val GROUPIE = "com.xwray:groupie:2.3.0"
-const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:2.3.0"
-
-const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
+const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0"
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 
@@ -92,9 +83,11 @@ const val DAGGER_ANDROID_SUPPORT_RUNTIME = "com.google.dagger:dagger-android-sup
 
 const val GLIDE = "com.github.bumptech.glide:glide:4.9.0"
 
-const val JUNIT = "junit:junit:4.13-beta-1"
-const val TRUTH = "com.google.truth:truth:0.42"
-const val MOCKITO_KOTLIN = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
-const val TEST_RUNNER = "androidx.test:runner:1.1.1"
-const val TEST_RULE = "androidx.test:rules:1.1.0"
+const val JUNIT = "junit:junit:4.12"
+const val TRUTH = "com.google.truth:truth:1.0"
+const val TEST_RUNNER = "androidx.test:runner:1.2.0"
+const val TEST_RULE = "androidx.test:rules:1.1.1"
+const val TEST_JUNIT = "androidx.test.ext:junit-ktx:1.1.1"
+const val TEST_ARCH = "androidx.arch.core:core-testing:2.1.0"
 const val ESPRESSO = "androidx.test.espresso:espresso-core:3.1.1"
+const val MOCKITO_KOTLIN = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
