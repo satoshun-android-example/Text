@@ -19,7 +19,11 @@ class EmojiBreakFragment : Fragment(R.layout.emoji_break_frag) {
     binding.emoji1.text = "testtest😌😌😌😌😌😌"
     binding.emoji2.text = "testtest😌😌😌😌😌😌"
     binding.emoji3.text = "testtest😌😌😌😌😌😌"
-    binding.emoji4.text = "たなかさん、こんにてゃ！こちらこそどんな😌"
+
+    lifecycleScope.launch {
+      binding.emoji4.setTextWithStripOverflowText("たなかさん、こんにてゃ！こちらこそどんな😌")
+    }
+
     binding.emoji5.text = "たなかさん、こんにてゃ！こちらこそどんな😌"
     binding.emoji6.text = "たなかさん、こんにてゃ！こちらこそどんな😌"
     binding.emoji7.text = "testtesttesttesttesttest"
@@ -36,12 +40,6 @@ class EmojiBreakFragment : Fragment(R.layout.emoji_break_frag) {
       binding.emoji12.ellipsize = null
     }
 
-    lifecycleScope.launch {
-      binding.emoji13.setTextWithStripOverflowText("たなかさん、😌😌こんに😌てゃ！こちらこそどんな😌")
-
-      delay(1000)
-
-      binding.emoji13.setTextWithStripOverflowText("たなさん、😌😌こんに😌てゃ！こちらこそどん😌")
-    }
+    binding.emoji13.text = "たなかさん、😌😌こんに😌てゃ！こちらこそどんな😌"
   }
 }
