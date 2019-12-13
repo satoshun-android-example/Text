@@ -15,15 +15,5 @@ class AppActivity : AppCompatActivity() {
     binding = AppActBinding.inflate(layoutInflater)
     setContentView(binding.root)
     setSupportActionBar(binding.toolbar)
-
-    val fontRequest = FontRequest(
-      "com.google.android.gms.fonts",
-      "com.google.android.gms",
-      "Noto Color Emoji Compat",
-      R.array.com_google_android_gms_fonts_certs
-    )
-
-    val config = FontRequestEmojiCompatConfig(this, fontRequest).setReplaceAll(true)
-    EmojiCompat.init(config)
   }
 }

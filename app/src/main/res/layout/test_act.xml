@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:orientation="vertical">
+  android:layout_marginBottom="32dp">
 
-  <androidx.emoji.widget.EmojiAppCompatTextView
-    android:id="@+id/emoji1"
+  <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:ellipsize="end"
-    android:lines="1"
-    android:textSize="38sp" />
-</LinearLayout>
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:ignore="HardcodedText">
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+      android:id="@+id/emoji1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:lines="1"
+      android:textSize="38sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -10,6 +10,7 @@ buildscript {
     classpath KOTLIN_PLUGIN
     classpath VERSIONS_PLUGIN
     classpath SAFEARGS_PLUGIN
+    classpath FACEBOOK_SCREEN_PLUGIN
   }
 }
 

@@ -4,6 +4,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'com.facebook.testing.screenshot'
 
 android {
   compileSdkVersion COMPILE_SDK
@@ -15,7 +16,7 @@ android {
     versionCode 1
     versionName "1.0"
 
-    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    testInstrumentationRunner "com.github.satoshun.example.test.ScreenshotTestRunner"
   }
   buildTypes {
     release {
@@ -65,9 +66,14 @@ dependencies {
 
   testImplementation JUNIT
 
-  androidTestImplementation TEST_RUNNER
-  androidTestImplementation TEST_RULE
-  androidTestImplementation TEST_JUNIT
-  androidTestImplementation ESPRESSO
-  androidTestImplementation TEST_ARCH
+  // TODO androidTestImplementation
+  // https://stackoverflow.com/questions/56558775/launchfragmentincontainer-unable-to-resolve-activity-in-android
+  implementation TEST_RUNNER
+  implementation TEST_RULE
+  implementation TEST_JUNIT
+  implementation ESPRESSO
+  implementation TEST_ARCH
+  androidTestImplementation FACEBOOK_SCREEN_SHOT
+  androidTestImplementation FACEBOOK_SCREEN_SHOT_LITHO
+  implementation "androidx.fragment:fragment-testing:1.2.0-rc03"
 }

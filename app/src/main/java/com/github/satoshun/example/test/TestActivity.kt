@@ -13,15 +13,6 @@ class TestActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    val fontRequest = FontRequest(
-      "com.google.android.gms.fonts",
-      "com.google.android.gms",
-      "Noto Color Emoji Compat",
-      R.array.com_google_android_gms_fonts_certs
-    )
-    val config = FontRequestEmojiCompatConfig(this, fontRequest).setReplaceAll(true)
-    EmojiCompat.init(config)
-
     setContentView(R.layout.test_act)
     emoji1 = findViewById(R.id.emoji1)
   }
