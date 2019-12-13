@@ -17,7 +17,7 @@ class EmojiBreakTest {
 
     activityScenario.onActivity { activity ->
       Screenshot.snapActivity(activity)
-        .setName("break_test1.png")
+        .setName("break_test1")
         .record()
     }
   }
@@ -27,7 +27,7 @@ class EmojiBreakTest {
     val scenario = launchFragmentInContainer<EmojiBreakFragment>()
     scenario.onFragment { fragment ->
       Screenshot.snap(fragment.view)
-        .setName("break_test2.png")
+        .setName("break_test2")
         .record()
     }
   }
