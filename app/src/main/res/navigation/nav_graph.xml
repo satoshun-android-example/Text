@@ -12,10 +12,19 @@
     <action
       android:id="@+id/nav_home_to_emoji_break"
       app:destination="@id/nav_emoji_break" />
+
+    <action
+      android:id="@+id/nav_home_to_emoji_break2"
+      app:destination="@id/nav_emoji_break2" />
   </fragment>
 
   <fragment
     android:id="@+id/nav_emoji_break"
     android:name="com.github.satoshun.example.main.emojibreak.EmojiBreakFragment"
     tools:layout="@layout/emoji_break_frag" />
+
+  <fragment
+    android:id="@+id/nav_emoji_break2"
+    android:name="com.github.satoshun.example.main.emojibreak.EmojiBreakFragment2"
+    tools:layout="@layout/emoji_break_frag2" />
 </navigation>

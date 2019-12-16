@@ -17,5 +17,9 @@ class MainFragment : Fragment(R.layout.main_frag) {
     binding.emojiBreak.setOnClickListener {
       findNavController().navigate(MainFragmentDirections.navHomeToEmojiBreak())
     }
+
+    binding.emojiBreak2.setOnClickListener {
+      findNavController().navigate(MainFragmentDirections.navHomeToEmojiBreak2())
+    }
   }
 }

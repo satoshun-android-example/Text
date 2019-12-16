@@ -17,10 +17,21 @@ class EmojiBreakFragment2 : Fragment(R.layout.emoji_break_frag2) {
 
     lifecycleScope.launch {
       binding.emoji1.setTextWithStripOverflowText("testtest😌😌😌😌😌😌")
+    }
+    lifecycleScope.launch {
       binding.emoji2.setTextWithStripOverflowText("testtestあ😌😌😌😌😌😌")
+    }
+    lifecycleScope.launch {
       binding.emoji3.setTextWithStripOverflowText("testtestああ😌😌😌😌😌😌")
+    }
+    lifecycleScope.launch {
       binding.emoji4.setTextWithStripOverflowText("testtestあああ😌😌😌😌😌😌")
+    }
+    lifecycleScope.launch {
       binding.emoji5.setTextWithStripOverflowText("testtestああああ😌😌😌😌😌😌")
+    }
+    lifecycleScope.launch {
+      binding.emoji6.setTextWithStripOverflowText("testtestああああああ😌😌😌😌😌😌")
     }
   }
 }
