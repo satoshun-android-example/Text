@@ -31,4 +31,14 @@ class EmojiBreakTest {
         .record()
     }
   }
+
+  @Test
+  fun break_test3() {
+    val scenario = launchFragmentInContainer<EmojiBreakFragment2>()
+    scenario.onFragment { fragment ->
+      Screenshot.snap(fragment.view)
+        .setName("break_test3")
+        .record()
+    }
+  }
 }
