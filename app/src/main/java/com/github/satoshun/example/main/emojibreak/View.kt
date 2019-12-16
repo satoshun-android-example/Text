@@ -18,6 +18,7 @@ package com.github.satoshun.example.main.emojibreak
 import android.view.View
 import android.widget.TextView
 import androidx.core.view.OneShotPreDrawListener
+import androidx.emoji.text.EmojiCompat
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 
@@ -30,6 +31,12 @@ suspend fun TextView.setTextWithStripOverflowText(newText: String) {
   val newEndIndex = layout?.getEllipsisStart(0) ?: return
   if (newEndIndex == 0) return
   if (text.length < newEndIndex + 2) return
+
+  if (EmojiCompat.get().hasEmojiGlyph(text.substring(newEndIndex, newEndIndex + 2))) {
+    // remove end of emoji and force ellipsis
+    text = "${text.subSequence(0, newEndIndex)}ああああああ"
+    return
+  }
 
   text = text.subSequence(0, newEndIndex + 2)
 }

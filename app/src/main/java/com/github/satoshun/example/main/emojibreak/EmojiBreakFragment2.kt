@@ -33,5 +33,8 @@ class EmojiBreakFragment2 : Fragment(R.layout.emoji_break_frag2) {
     lifecycleScope.launch {
       binding.emoji6.setTextWithStripOverflowText("testtestああああああ😌😌😌😌😌😌")
     }
+    lifecycleScope.launch {
+      binding.emoji7.setTextWithStripOverflowText("testtesttesttest😌😌😌😌😌😌")
+    }
   }
 }
