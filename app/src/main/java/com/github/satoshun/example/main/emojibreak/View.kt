@@ -34,11 +34,9 @@ suspend fun TextView.setTextWithStripOverflowText(newText: String) {
 
   if (EmojiCompat.get().hasEmojiGlyph(text.substring(newEndIndex, newEndIndex + 2))) {
     // remove end of emoji and force ellipsis
-    text = "${text.subSequence(0, newEndIndex)}ああああああ"
+    text = "${text.subSequence(0, newEndIndex)}…"
     return
   }
-
-  text = text.subSequence(0, newEndIndex + 2)
 }
 
 suspend fun View.awaitPreDraw() = suspendCancellableCoroutine<Unit> { cont ->
